@@ -26,12 +26,12 @@ This is a tutorial about learning Spring Data MongoDB to develop a simple CRUD E
 
 ### 1.1 MongoDB Installation
 
-Can install either from MongoDB website or the Mac terminal.
+Can install from MongoDB website or the Mac terminal.
 
 Website: [Install MongoDB Community Edition](https://www.mongodb.com/docs/manual/administration/install-community/)
-
-Terminal: [How to install Mongodb 5 | latest MAC installation (YouTube)](https://www.youtube.com/watch?v=s1WQ0eEpqqg)
-
+<br>
+Terminal: [How to install Mongodb 5 | latest MAC installation (YouTube/HiteshChoudhary)](https://www.youtube.com/watch?v=s1WQ0eEpqqg)
+<br>
 Common problem when installing via Terminal: [zsh: command not found: mongo](https://stackoverflow.com/questions/68695241/zsh-command-not-found-mongo)
 
 ### 1.2 Mongosh vs. Studio3T
@@ -40,11 +40,11 @@ Can use a shell (Terminal) or GUI to access MongoDB.
 
 MongoDB Shell (Mongosh) is the quickest way to connect, configure, query, and work with your MongoDB database. It acts as a command-line client of the MongoDB server.
 
-Mongosh: [MongoDB Crash Course](https://www.youtube.com/watch?v=ofme2o29ngU)
+Mongosh: [MongoDB Crash Course (YouTube/WebDevSimplified)](https://www.youtube.com/watch?v=ofme2o29ngU)
 
 Studio3T is an interactive tool for querying, optimizing, and analyzing your MongoDB data. Studio3T also has its own built-in mongo shell, IntelliShell, which offers live error highlighting and smart auto-completion.
 
-Studio3T: [Getting Started with Studio 3T | The GUI for MongoDB](https://www.youtube.com/watch?v=cKHumpkI7c8)
+Studio3T: [Getting Started with Studio 3T | The GUI for MongoDB (YouTube/Studio3T)](https://www.youtube.com/watch?v=cKHumpkI7c8)
 
 ### 1.3 MongoDB Commands
 
@@ -52,7 +52,7 @@ MongoDB has some commonly used commands which have been neatly gathered for quic
 
 ## 2. REST API
 
-[Spring Data MongoDB Tutorial (YouTube)](https://programmingtechie.com/2021/01/06/spring-data-mongodb-tutorial/)
+[Spring Data MongoDB Tutorial (ProgrammingTechie)](https://programmingtechie.com/2021/01/06/spring-data-mongodb-tutorial/)
 
 ### 2.1 Dependencies
 
@@ -113,18 +113,18 @@ public enum ExpenseCategory {
 }
 ```
 
-- normal POJO class with annotations.
+- Normal POJO class with annotations.
 - Lombok annotations reduce boilerplate code.
 - To define a Model Class as a MongoDB Document, we are going to use the @Document(“expense”) where expense is the name of the Document.
 - @Id represents a unique identifier for our Document.
 - We can represent different fields inside the Document using the @Field annotation.
-- By Default, Spring Data creates the field inside the document using the fieldName of the model class (Eg: expenseName), but we can override this by providing the required value to the annotation eg: @Field(“name”)
+- By default, Spring Data creates the field inside the document using the fieldName of the model class (Eg: expenseName), but we can override this by providing the required value to the annotation eg: @Field(“name”).
 - To be able to easily retrieve the documents, we can also create an index using the @Indexed annotaion.
 - We can also specify the unique=true property to make sure that this field is unique.
 
 ### 2.3 Repository
 
-- Spring Data MongoDB provides an interface called MongoRepository which provides an API to perform read and write operations to MongoDB.
+Spring Data MongoDB provides an interface called MongoRepository which provides an API to perform read and write operations to MongoDB.
 
 ExpenseRepository.java:
 ```java
@@ -135,12 +135,12 @@ public interface ExpenseRepository extends MongoRepository<Expense, String> {
 }
 ```
 
-- We can also perform custom queries using the @Query annotation and by passing in the required query we need to run to this annotation.
-- Spring Data will inject the value of the name field into the query, in the place of the ?0 placeholder.
+We can also perform custom queries using the @Query annotation and by passing in the required query we need to run to this annotation.
+Spring Data will inject the value of the name field into the query, in the place of the ?0 placeholder.
 
 ### 2.4 Creating REST API (Service & Controller)
 
-- Need to add the business logic in the Service layer.
+Need to add the business logic in the Service layer.
 
 ExpenseService.java:
 ```java
@@ -180,7 +180,7 @@ public class ExpenseService {
 }
 ```
 
-- Need to add the API Endpoints in the Controller layer.
+Need to add the API Endpoints in the Controller layer.
 
 ExpenseController.java:
 ```java
