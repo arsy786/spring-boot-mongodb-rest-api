@@ -1,6 +1,46 @@
-# Spring Boot MongoDB REST API 
+# Spring Boot MongoDB REST API
 
-This is a tutorial about learning Spring Data MongoDB to develop a simple CRUD Expense Manager REST API.
+This is a guide about learning Spring Data MongoDB to develop a simple CRUD Expense Manager REST API.
+
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Java 11
+- Maven
+
+### Running the App
+
+1.  Open your terminal or command prompt.
+
+2.  Clone the repository using Git:
+
+    ```bash
+    git clone https://github.com/arsy786/spring-boot-mongodb-rest-api.git
+    ```
+
+3.  Navigate to the cloned repository's root directory:
+
+    ```bash
+    cd spring-boot-mongodb-rest-api
+    ```
+
+4.  Run the following Maven command to build and start the service:
+
+    ```bash
+    # For Maven
+    mvn spring-boot:run
+
+    # For Maven Wrapper
+    ./mvnw spring-boot:run
+    ```
+
+The application should now be running on `localhost:8080`.
+
+### Database Configuration
+
+[2.1 Dependencies](#21-dependencies)
 
 ## Table of Contents
 
@@ -36,7 +76,7 @@ Common problem when installing via Terminal: [zsh: command not found: mongo](htt
 
 ### 1.2 Mongosh vs. Studio3T
 
-Can use a shell (Terminal) or GUI to access MongoDB. 
+Can use a shell (Terminal) or GUI to access MongoDB.
 
 MongoDB Shell (Mongosh) is the quickest way to connect, configure, query, and work with your MongoDB database. It acts as a command-line client of the MongoDB server.
 
@@ -65,7 +105,8 @@ You can download the starter project with all the needed dependencies at Spring 
 
 You can define the MongoDB properties by either using the MongoURI or by defining the host, username, password and database details:
 
-application.properties:
+`application.properties`:
+
 ```properties
 # Approach 1
 spring.data.mongodb.uri=mongodb://localhost:27017/expense-tracker
@@ -81,7 +122,8 @@ NOTE: If authentication enabled, username and password must be provided.
 
 ### 2.2 Model
 
-expense.java:
+`expense.java`:
+
 ```java
 @Getter
 @Setter
@@ -106,7 +148,8 @@ public class Expense {
 }
 ```
 
-ExpenseCategory.java:
+`ExpenseCategory.java`:
+
 ```java
 public enum ExpenseCategory {
     ENTERTAINMENT, GROCERIES, RESTAURANT, UTILITIES, MISC
@@ -126,7 +169,8 @@ public enum ExpenseCategory {
 
 Spring Data MongoDB provides an interface called MongoRepository which provides an API to perform read and write operations to MongoDB.
 
-ExpenseRepository.java:
+`ExpenseRepository.java`:
+
 ```java
 @Repository
 public interface ExpenseRepository extends MongoRepository<Expense, String> {
@@ -142,7 +186,8 @@ Spring Data will inject the value of the name field into the query, in the place
 
 Need to add the business logic in the Service layer.
 
-ExpenseService.java:
+`ExpenseService.java`:
+
 ```java
 @Service
 @RequiredArgsConstructor
@@ -182,7 +227,8 @@ public class ExpenseService {
 
 Need to add the API Endpoints in the Controller layer.
 
-ExpenseController.java:
+`ExpenseController.java`:
+
 ```java
 @RestController
 @RequestMapping("/expense")
