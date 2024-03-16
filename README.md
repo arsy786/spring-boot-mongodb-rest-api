@@ -2,7 +2,29 @@
 
 This is a guide about learning Spring Data MongoDB to develop a simple CRUD Expense Manager REST API.
 
-## Getting Started
+## Table of Contents
+
+[0. Getting Started](#0-getting-started)
+<br>
+[1. MongoDB](#1-mongodb)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.1 MongoDB Installation](#11-mongodb-installation)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.2 Mongosh vs. Studio3T](#12-mongosh-vs-studio3t)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.3 MongoDB Commands](#13-mongodb-commands)
+<br>
+[2. REST API](#2-rest-api)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1 Dependencies](#21-dependencies)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.2 Model](#22-model)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.3 Repository](#23-repository)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.4 Creating REST API (Service & Controller)](#24-creating-rest-api-service--controller)
+
+## 0. Getting Started
 
 ### Prerequisites
 
@@ -41,26 +63,6 @@ The application should now be running on `localhost:8080`.
 ### Database Configuration
 
 [2.1 Dependencies](#21-dependencies)
-
-## Table of Contents
-
-[1. MongoDB](#1-mongodb)
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.1 MongoDB Installation](#11-mongodb-installation)
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.2 Mongosh vs. Studio3T](#12-mongosh-vs-studio3t)
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.3 MongoDB Commands](#13-mongodb-commands)
-<br>
-[2. REST API](#2-rest-api)
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1 Dependencies](#21-dependencies)
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.2 Model](#22-model)
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.3 Repository](#23-repository)
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.4 Creating REST API (Service & Controller)](#24-creating-rest-api-service--controller)
 
 ## 1. MongoDB
 
